@@ -36,6 +36,6 @@ public class aluno extends Pessoa{
     
     @Override
     public String toString(){
-        return super.toString() + "\r\nMatrícula: " + numMatricula + "\r\nCurso: " + curso;
+        return super.toString() + "\r\n"+"Matrícula: " + numMatricula + "\r\nCurso: " + curso+"\r\n";
     }
 }

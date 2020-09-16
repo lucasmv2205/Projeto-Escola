@@ -40,7 +40,7 @@ public class Curso {
     
     @Override
     public String toString(){
-        return  "\r\nnome: " + nome + "\r\nsigla: " + sigla + "\r\nduracao: " + duracao;
+        return  "\r\n"+"nome: " + nome + "\r\nsigla: " + sigla + "\r\nduracao: " + duracao+"\r\n";
     }
     
 }

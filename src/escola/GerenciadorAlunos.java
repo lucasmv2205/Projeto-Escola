@@ -49,7 +49,18 @@ public class GerenciadorAlunos {
             }
         }
         return null;
-        
     }
+    
+    public void consultarAlunoPorCurso(String sigla){
+        for(aluno p: listaAlunos){
+            if(p.getcurso().getsigla() == sigla){
+                System.out.println(p);
+            }
+          
+        }
+
+    }
+    
+    
     
 }

@@ -49,7 +49,7 @@ public class Pessoa {
     
     @Override
     public String toString(){
-        return "nome: " + nome + "\r\nCPF: " + cpf + endereco;
+        return "\r\nnome: " + nome + "\r\nCPF: " + cpf + endereco;
     }
     
     public String getnome(){

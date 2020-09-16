@@ -19,25 +19,39 @@ public class Escola {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    
-        gAlunos.cadastrarAluno("Eduardo","125","11821EEL002", "alameda", "saraiva", "666");
-        gAlunos.cadastrarAluno("Eber","854","11547EBI745", "alameda", "saraiva", "666");
-        gAlunos.cadastrarAluno("Vinícius","752","11821ECP987", "alameda", "saraiva", "666");
-        gAlunos.cadastrarAluno("Andrei","158","11221EBI259", "alameda", "saraiva", "666");
-        
+            
+            //Cadastrando 4 alunos
+        gAlunos.cadastrarAluno("Eduardo","125","11821EDU002", "alameda", "saraiva", "666");
+        gAlunos.cadastrarAluno("Eber","854","11547EBER745", "alameda", "saraiva", "666");
+        gAlunos.cadastrarAluno("Vinícius","752","11821VINI987", "alameda", "saraiva", "666");
+        gAlunos.cadastrarAluno("Andrei","158","11221AND259", "alameda", "saraiva", "666");
+            
+            //Cadastrando 2 cursos
         gCursos.cadastrarCurso("Engenharia Biomédica", "EBI", "10");
         gCursos.cadastrarCurso("Engenharia Elétrica", "EEL", "10");
-        gCursos.cadastrarCurso("Engenharia Computação", "ECP", "8");
+            
+            
+            //Imprimindo lista de cursos e de alunos
+        System.out.println("\r\n"+gAlunos.listaAlunos+"\r\n");
+        System.out.println("\r\n"+gCursos.listaCurso+"\r\n");
+            
+            //Mudando nome de um curso
+        gCursos.consultarCursoPorNome("Engenharia Biomédica").setnome("Engenharia de Biomaterias");
+            
+            //Matriculando alunos nos cursos
+        gAlunos.matricularAluno("11821EDU002", "EBI");
+        gAlunos.matricularAluno("11547EBER745", "EEL");
+        gAlunos.matricularAluno("11821VINI987", "EEL");
+        gAlunos.matricularAluno("11221AND259", "EBI");
+            
+            //Imprimindo listas na tela
+        System.out.println("\r\n"+gCursos.listaCurso+"\r\n");
+        System.out.println("\r\n"+gAlunos.listaAlunos+"\r\n");
         
-        gAlunos.matricularAluno("11821EEL002", "EBI");
-        gAlunos.matricularAluno("11547EBI745", "EEL");
-        gAlunos.matricularAluno("11821ECP987", "ECP");
-        gAlunos.matricularAluno("11221EBI259", "EBI");
+            //Lista de alunos que estão matriculados em um mesmo curso
+        System.out.println("Alunos do mesmo curso"+"\r\n");
         
-        System.out.println(gAlunos.listaAlunos);
-        System.out.println(gCursos.listaCurso);
-        
-        
+        gAlunos.consultarAlunoPorCurso("EEL");
         
     }
     
